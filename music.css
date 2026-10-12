@@ -1,0 +1,61 @@
+.music-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+}
+
+body.embedded-page .music-controls {
+    display: none;
+}
+
+.music-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #b33978;
+    box-shadow: 0 4px 14px rgba(179, 57, 120, 0.2);
+    font: 600 0.95rem/1.2 'Be Vietnam Pro', 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+.music-toggle:hover {
+    background: #fff;
+    transform: translateY(-1px);
+}
+
+.music-toggle:focus-visible {
+    outline: 3px solid #8a2be2;
+    outline-offset: 3px;
+}
+
+.music-status {
+    max-width: min(18rem, calc(100vw - 2rem));
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #6b3560;
+    font: 0.8rem/1.4 'Be Vietnam Pro', 'Quicksand', sans-serif;
+    text-align: right;
+}
+
+.music-status:empty {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .music-controls {
+        top: 0.65rem;
+        right: 0.65rem;
+    }
+
+    .music-toggle {
+        padding: 0.55rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}

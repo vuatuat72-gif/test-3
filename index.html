@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="floating-hearts.css">
+    
+</head>
+<body>
+    <audio id="background-music" src="./inlove.mp3" preload="metadata"></audio>
+    <div class="music-controls">
+        <button class="music-toggle" type="button" aria-pressed="false">♫ Bật nhạc</button>
+        <span class="music-status" aria-live="polite"></span>
+    </div>
+    <iframe id="story-frame" class="story-frame" title="Birthday story" hidden></iframe>
+    <div class="container">
+        <h1>Happy Birthday Phượng 💗</h1>
+        <div class="greeting"></div>
+        <button class="cta-button">đi vào phần chính nhé.💕</button>
+    </div>
+
+    <script src="music.js"></script>
+    <script src="floating-hearts.js"></script>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

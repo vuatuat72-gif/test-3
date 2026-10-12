@@ -1,0 +1,42 @@
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-heart {
+    position: absolute;
+    left: var(--left);
+    bottom: -3rem;
+    font-size: var(--heart-size);
+    opacity: 0;
+    animation: float-heart var(--float-duration) ease-in-out var(--delay) infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes float-heart {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    12%,
+    85% {
+        opacity: 0.72;
+    }
+
+    100% {
+        transform: translate3d(var(--drift), -110vh, 0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-heart {
+        animation: none;
+        opacity: 0.55;
+        bottom: 12%;
+    }
+}
